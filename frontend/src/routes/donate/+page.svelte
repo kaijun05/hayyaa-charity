@@ -31,7 +31,7 @@
 
 <div class="block max-w-[1500px] my-[2rem] mx-auto py-[5rem] fade-in-up">
   <div class="donation-title flex justify-center">
-    <div class="text-left text-7xl font-bold text-white w-full">
+    <div class="text-left text-7xl font-bold text-white w-full mb-5">
       Every cents counts.
     </div>
   </div>
