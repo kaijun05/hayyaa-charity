@@ -10,13 +10,13 @@
       </div>
       <div class="flex space-x-6">
         <a href="#" class="opacity-70 hover:opacity-100">
-          <img src="/facebook.svg" alt="Facebook" class="w-6 h-6" />
+          <img src="./facebook.svg" alt="Facebook" class="w-6 h-6" />
         </a>
         <a href="#" class="opacity-70 hover:opacity-100">
-          <img src="/instagram.svg" alt="Instagram" class="w-6 h-6" />
+          <img src="./instagram.svg" alt="Instagram" class="w-6 h-6" />
         </a>
         <a href="#" class="opacity-70 hover:opacity-100">
-          <img src="/whatsapp.svg" alt="WhatsApp" class="w-6 h-6" />
+          <img src="./whatsapp.svg" alt="WhatsApp" class="w-6 h-6" />
         </a>
       </div>
     </div>
