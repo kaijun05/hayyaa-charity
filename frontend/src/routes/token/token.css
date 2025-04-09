@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+h1 {
+	font-family: 'Raleway', sans-serif;
+}
+
+.token-title {
+	padding: 20px 0 20px 8px;
+}
+
+.token-card {
+	margin: 20px 8px 20px 8px;
+}
+
+.batch-name {
+	color: black;
+}
+
+.container {
+	background-color: #1d2574;
+}
