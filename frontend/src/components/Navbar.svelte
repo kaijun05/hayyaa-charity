@@ -2,12 +2,12 @@
     import UserIcon from "./UserIcon.svelte";
 </script>
 
-<div class="flex m-auto w-[80%] gap-8 justify-between rounded-4xl px-6 py-4 my-4 items-center font-semibold bg-white/15">
-    <a href="/" class="text-2xl">Hayyaa</a>
-    <div class="flex gap-8">
-        <a href="/#about-us">About us</a>
-        <a href="/token">Token Tracker</a>
-        <a href="/donate">Donate now</a>
+<div class="flex m-auto w-[80%] gap-8 justify-between rounded-full px-3 my-4 items-center bg-white/15 font-semibold h-[95px]">
+    <a href="/" class="text-3xl font-semibold ml-8">Hayyaa</a>
+    <div class="flex gap-16">
+        <a href="/#about-us" class="text-1xl">About us</a>
+        <a href="/token" class="text-1xl">Token Tracker</a>
+        <a href="/donate" class="text-1xl">Donate now</a>
     </div>
     <div>
         <UserIcon />
