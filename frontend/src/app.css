@@ -1,15 +1,16 @@
+@import url('https://fonts.cdnfonts.com/css/sansation');
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
 body {
-  min-height: 100vh;
-  background: linear-gradient(to bottom, #6366F1, #4338CA);
-  color: white;
-  margin: 0;
-  font-family: sans-serif;
+	min-height: 100vh;
+	background: linear-gradient(to bottom, #6366f1, #4338ca);
+	color: white;
+	margin: 0;
+	font-family: 'Sansation', sans-serif;
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
