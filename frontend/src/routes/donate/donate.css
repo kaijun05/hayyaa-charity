@@ -160,7 +160,7 @@ body {
   padding: 0.5rem;
   border-radius: 0.5rem;
   background: white;
-  color: var(--text-light);
+  color: var(--text-dark);
   box-shadow: #1a1a1a 0px 0px 7px 1px;
 }
 
