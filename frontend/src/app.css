@@ -4,8 +4,8 @@
 @plugin '@tailwindcss/typography';
 
 body {
-	min-height: 100vh;
-	background: linear-gradient(to bottom, #6366f1, #4338ca);
+	min-height: 100%;
+  background: radial-gradient(50% 50% at 50% 50%, #2D336B 0%, #5864D1 100%);
 	color: white;
 	margin: 0;
 	font-family: 'Sansation', sans-serif;
