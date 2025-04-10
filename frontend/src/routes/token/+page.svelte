@@ -1,6 +1,7 @@
 <script lang="ts">
 	export let data;
 	import './token.css';
+	
 	console.log(data);
 </script>
 
