@@ -4,7 +4,7 @@
 </script>
 
 <div class="max-w-6xl mx-auto px-6 pt-20 mb-80">
-    <h1 class="text-7xl font-semibold leading-tight mb-80">
+    <h1 class="text-[5rem] font-semibold leading-tight mt-30 mb-[50rem]">
       Transforming Charity with Transparency & AI
      </h1>
      <div class="grid grid-cols-2">
