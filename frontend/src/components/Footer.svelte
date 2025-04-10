@@ -1,5 +1,5 @@
   <!-- Footer -->
-  <footer class="max-w-6xl mx-auto px-6 py-20">
+  <footer class="mx-auto px-20 py-20 fixed bottom-0 w-[100%]">
     <div class="flex justify-between items-center">
       <div>
         <h3 class="text-2xl font-semibold mb-4">Interested?</h3>

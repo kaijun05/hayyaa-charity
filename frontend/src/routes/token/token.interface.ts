@@ -4,10 +4,10 @@ export interface Token {
 	created_at: Date;
 	number_of_people_donated: number;
 	total_amount: number;
-	funt_distributed: FuntDistributed[];
+	fund_distributed: FundDistributed[];
 }
 
-export interface FuntDistributed {
+export interface FundDistributed {
 	id: string;
 	token_id: string;
 	purpose: string;
@@ -32,7 +32,7 @@ export class TokenServer {
 				end_at: endAt,
 				number_of_people_donated: donated,
 				total_amount: totalAmount,
-				funt_distributed: this.generateFundDistributions(tokenId, totalAmount)
+				fund_distributed: this.generateFundDistributions(tokenId, totalAmount)
 			};
 
 			tokens.push(token);
@@ -41,10 +41,10 @@ export class TokenServer {
 		return tokens;
 	}
 
-	private generateFundDistributions(tokenId: string, totalAmount: number): FuntDistributed[] {
-		// exmaple purposes
+	private generateFundDistributions(tokenId: string, totalAmount: number): FundDistributed[] {
+		// example purposes
 		const purposes = ['Education', 'Healthcare', 'Environment', 'Animals', 'Community'];
-		const distributions: FuntDistributed[] = [];
+		const distributions: FundDistributed[] = [];
 		let percentageLeft = 100;
 
 		const count = Math.floor(Math.random() * 4) + 2;

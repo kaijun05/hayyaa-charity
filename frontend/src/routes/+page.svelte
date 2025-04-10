@@ -1,40 +1,11 @@
 <script lang="ts">
-
+  import Hero from "../components/Hero.svelte";
 </script>
 
   <!-- Hero Section -->
-   <main class=" max-w-[70rem] mx-auto">
-     <div class="max-w-6xl mx-auto px-6 pt-20">
-       <h1 class="text-6xl font-semibold leading-tight mb-40">
-         Transforming Charity with Transparency & AI
-        </h1>
-      </div>
+   <main class=" max-w-[70rem] min-w-[50rem] mx-auto">
+      <Hero />
       
-      <div class="grid grid-cols-2 gap-28 gap-y-48 mb-20 justify-center content-center">
-        <div>
-          <div class="text-sm opacity-80">Total funded</div>
-          <div class="text-4xl font-semibold mt-1">RM 450,000</div>
-          <div class="mt-4">
-            <div class="text-sm opacity-80">Total donors</div>
-            <div class="text-3xl font-semibold mt-1">1,600 donors</div>
-          </div>
-        </div>
-        <div>
-          <div class="text-sm opacity-80">Total distributed</div>
-          <div class="text-4xl font-semibold mt-1">RM 445,000</div>
-          <div class="mt-4">
-            <div class="text-sm opacity-80">Total helped</div>
-            <div class="text-3xl font-semibold mt-1">4,000 recipients</div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="flex items-center gap-2">
-        <span class="text-2xl font-bold flex items-center gap-2">Be a donor now <span class="text-lg">→</span></span>
-        <a href="/donate" class="inline-flex items-center space-x-2 bg-white/10 hover:bg-white/20 rounded-full px-4 py-2 transition-colors">
-          Donate
-        </a>
-      </div>
       <!-- About us Section -->
       <!-- <div id="about-us" class="max-w-6xl mx-auto px-6 py-32">
         <h2 class="text-4xl font-semibold mb-8">every donation deserves a story</h2>
