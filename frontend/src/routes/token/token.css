@@ -5,11 +5,11 @@ h1 {
 }
 
 .token-title {
-	padding: 20px 0 20px 8px;
+	padding: 20px 0 20px 20px;
 }
 
 .token-card {
-	margin: 0 8px 20px 8px;
+	margin: 0 20px 20px 20px;
 }
 
 .batch-name {
@@ -20,10 +20,12 @@ h1 {
 	background-color: #1d2574;
 }
 
-button {
-	margin: 20px;
+.wrapper-container {
+	max-width: 1025px;
 }
+
 .custom-btn {
+	margin: 20px;
 	width: 60px;
 	height: 20px;
 	color: #fff;
