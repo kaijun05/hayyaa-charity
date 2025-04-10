@@ -3,7 +3,7 @@
 </script>
 
   <!-- Hero Section -->
-   <main class=" max-w-[70rem] min-w-[50rem] mx-auto">
+   <main class=" max-w-[70rem] min-w-[50rem] mx-auto fade-in-up">
       <Hero />
       
       <!-- About us Section -->

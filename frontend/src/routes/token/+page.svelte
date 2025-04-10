@@ -4,7 +4,7 @@
 	console.log(data);
 </script>
 
-<div class="container mx-auto flex w-3/4 flex-col gap-6">
+<div class="container mx-auto flex w-3/4 flex-col gap-6 fade-in-up">
 	<h1 class="token-title text-3xl font-bold">Latest Token</h1>
 
 	{#each data.tokens as token (token.id)}

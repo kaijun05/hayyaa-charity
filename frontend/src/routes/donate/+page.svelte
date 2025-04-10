@@ -6,6 +6,7 @@
   let customAmount: number | null = null;
   let isAnonymous = false;
   let errorMessage = '';
+  const amounts = [100, 200, 300];
 
   function handleDonate() {
     const amount = customAmount || selectedAmount;
@@ -29,7 +30,7 @@
   }
 </script>
 
-<div class="block max-w-[1500px] my-[2rem] mx-auto py-[5rem] fade-in-up">
+<div class="block max-w-[1500px] mx-auto py-[5rem] fade-in-up">
   <div class="donation-title flex justify-center">
     <div class="text-left text-7xl font-bold text-white w-full mb-5">
       Every cent counts.
@@ -58,27 +59,17 @@
         </div>
 
         <div class="amount-options">
-          <button 
-            class="amount-button {selectedAmount === 100 ? 'active' : ''}"
-            class:active={selectedAmount === 100}
-            on:click={() => {selectedAmount = 100;
-            customAmount = null;}}>
-            RM 100
-          </button>
-          <button 
-            class="amount-button {selectedAmount === 200 ? 'active' : ''}"
-            class:active={selectedAmount === 200}
-            on:click={() => {selectedAmount = 200;
-            customAmount = null;}}>
-            RM 200
-          </button>
-          <button 
-            class="amount-button {selectedAmount === 300 ? 'active' : ''}"
-            class:active={selectedAmount === 300}
-            on:click={() => {selectedAmount = 300;
-            customAmount = null;}}>
-            RM 300
-          </button>
+          {#each amounts as amount}
+            <button 
+              class="amount-button"
+              class:active={selectedAmount === amount}
+              on:click={() => {
+                selectedAmount = amount;
+                customAmount = null;
+              }}>
+              RM {amount}
+            </button>
+          {/each}
         </div>
 
         <div class="custom-amount">
