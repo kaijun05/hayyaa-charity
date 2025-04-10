@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { TokenServer } from "$lib/interfaces/token.interface.js";
   export let data;
   import "./profile.css";
 
