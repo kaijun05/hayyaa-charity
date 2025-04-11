@@ -16,7 +16,7 @@
 
 <style>
     .navbar-transition {
-        transition: all 0.2s ease-in-out;
+        transition: all 0.4s ease-in-out;
     }
 </style>
 
@@ -26,6 +26,7 @@
         width: {scrolled ? '100%' : '70rem'};
         margin: {scrolled ? '0 auto 1rem auto' : '1rem auto'};
         border-radius: {scrolled ? '0px' : '9999px'};
+        background-color: {scrolled ? '#1D2574' : ''};
     "
 >
     <a href="/" rel="external" class="text-3xl font-semibold ml-8">Hayyaa</a>

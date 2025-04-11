@@ -18,13 +18,13 @@
 </script>
 
 <div class="profile-container max-w-[1500px] fade-in-up">
-  <h1>Hello, {userProfile.name}</h1>
+  <p class="text-[5rem] font-semibold leading-tight mt-10 mb-5">Hello, {userProfile.name}</p>
 
   <div class="profile-header">
-    <div class="profile-info">
+    <div class="profile-info text-xl">
       <img src={userProfile.avatar} alt={userProfile.name} class="profile-avatar" />
       <div class="profile-details">
-        <h2>{userProfile.fullName}</h2>
+        <h2 class="font-semibold">{userProfile.fullName}</h2>
         <p class="status">{userProfile.status}</p>
         <p class="email">{userProfile.email}</p>
       </div>
@@ -52,7 +52,7 @@
       ] as stat}
         <div>
           <h3 class="text-4xl opacity-80">{stat.label}</h3>
-          <p class="text-4xl font-semibold mt-1">{stat.value}</p>
+          <p class="text-6xl font-semibold mt-1">{stat.value}</p>
         </div>
       {/each}
     </div>
