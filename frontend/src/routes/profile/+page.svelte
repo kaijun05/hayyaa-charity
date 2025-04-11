@@ -69,9 +69,9 @@
           <div class="token-wrapper mt-2 w-4/4">
             <div class="token-upper ml-5 flex justify-between">
               <h2 class="batch-name rounded bg-blue-100 px-2.5 py-0.5 text-xl font-semibold">
-                Batch {new Date(token.created_at).toLocaleDateString()} - {new Date(
+                Batch {new Date(token.created_at).toLocaleDateString('en-GB')} - {new Date(
                   token.end_at
-                ).toLocaleDateString()}
+                ).toLocaleDateString('en-GB')}
               </h2>
               <span class="font-medium text-black">
                 #{token.id}

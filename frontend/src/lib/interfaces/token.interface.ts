@@ -24,8 +24,9 @@ export class TokenServer {
 			const donated = Math.floor(Math.random() * 100) + 1;
 			const totalAmount = Math.floor(Math.random() * 10000) + 1000;
 			const createdAt = new Date();
-			const endAt = new Date(createdAt);
+			const endAt = new Date(createdAt.getTime());
 			endAt.setDate(endAt.getDate() + 7);
+
 			const token: Token = {
 				id: tokenId,
 				created_at: createdAt,

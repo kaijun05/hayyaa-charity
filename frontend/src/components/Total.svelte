@@ -54,5 +54,5 @@
   
   <div class="mb-8">
     <h3 class="text-[2rem] opacity-80">Total {header}</h3>
-    <p class="text-[3.5rem] font-semibold mt-1">{formatNumber(animatedValue)}</p>
+    <p class="text-[4rem] font-semibold mt-1">{formatNumber(animatedValue)}</p>
   </div>
