@@ -4,6 +4,10 @@ h1 {
 	font-family: 'Raleway', sans-serif;
 }
 
+.page-button {
+	padding: 0 20px;
+}
+
 .token-title {
 	padding: 20px 0 20px 20px;
 }

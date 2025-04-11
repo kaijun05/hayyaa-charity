@@ -121,13 +121,13 @@
 		</div>
 	{/each}
 	<!-- Pagination controls -->
-	<div class="w-full">
+	<div class="m-auto flex w-full flex-col content-center justify-center">
 		<div
-			class="mr-20 ml-20 flex items-center justify-between rounded-full border-4 border-orange-100 bg-white shadow-sm"
+			class="m-auto flex items-center justify-between rounded-full border-4 border-orange-100 bg-white shadow-sm"
 		>
 			<!-- Previous Button -->
 			<button
-				class="flex items-center font-medium text-gray-800 disabled:cursor-not-allowed disabled:text-gray-400"
+				class="page-button flex items-center font-medium text-gray-800 disabled:cursor-not-allowed disabled:text-gray-400"
 				onclick={prevPage}
 				disabled={currentPage === 1}
 			>
@@ -145,7 +145,7 @@
 			</button>
 
 			<!-- Page Numbers -->
-			<div class="flex flex-1 items-center justify-center gap-1">
+			<div class="page-button flex flex-1 items-center justify-center gap-1">
 				{#each getPageRange() as page}
 					{#if page === '...'}
 						<span class="mx-1 px-2 text-gray-400">...</span>
@@ -162,7 +162,7 @@
 
 			<!-- Next Button -->
 			<button
-				class="flex items-center font-medium text-gray-800 disabled:cursor-not-allowed disabled:text-gray-400"
+				class="page-button flex items-center font-medium text-gray-800 disabled:cursor-not-allowed disabled:text-gray-400"
 				onclick={nextPage}
 				disabled={currentPage === totalPages}
 			>
@@ -182,7 +182,7 @@
 
 		<div class="mt-4 text-center font-medium text-gray-800">
 			<span>-</span>
-			<span class="mx-2">{totalItems} items</span>
+			<span class="mx-2 text-white">{totalItems} items</span>
 			<span>-</span>
 		</div>
 	</div>
