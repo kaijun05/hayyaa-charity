@@ -1,7 +1,6 @@
 <script lang="ts">
 	let { data } = $props();
 	import './token.css';
-	console.log(data.tokens.length);
 
 	let currentPage = $state(1);
 	const itemsListedPerPage = 10;
@@ -108,7 +107,7 @@
 						</div>
 					</div>
 					<!-- <div class="button-wrap"> -->
-					<button class="custom-btn btn-3"><span>View</span></button>
+					<a href="/token/{token.id}" class="custom-btn btn-3"><span>View</span></a>
 					<!-- </div> -->
 				</div>
 			</div>
@@ -180,7 +179,7 @@
 			</button>
 		</div>
 
-		<div class="mt-4 text-center font-medium text-gray-800">
+		<div class="mt-4 mb-4 text-center font-medium text-gray-800">
 			<span>-</span>
 			<span class="mx-2 text-white">{totalItems} items</span>
 			<span>-</span>
