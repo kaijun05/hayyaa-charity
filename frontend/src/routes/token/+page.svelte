@@ -1,6 +1,6 @@
 <script lang="ts">
 	let { data } = $props();
-	import './token.css';
+	import tokenCss from './token.css?url';
 
 	let currentPage = $state(1);
 	const itemsListedPerPage = 10;
@@ -78,13 +78,17 @@
 	});
 </script>
 
+<svelte:head>
+	<link rel="stylesheet" href={tokenCss} />
+</svelte:head>
+
 <div class="wrapper-container fade-in-up mx-w-10 container mx-auto flex w-3/4 flex-col gap-6">
 	<h1 class="token-title text-3xl font-bold">Latest Token</h1>
 
 	{#each paginatedTokens as token (token.id)}
 		<div class="token-card rounded-lg border-l-4 border-blue-500 bg-white p-6 shadow-md">
 			<div class="mb-4 flex items-center justify-between">
-				<div class="img-wrapper w-1/4 max-w-30">
+				<div class="img-wrapper w-1/4">
 					<img src="./token.png" alt="token" />
 				</div>
 				<div class="token-wrapper mt-2 w-4/4">
@@ -106,9 +110,8 @@
 							>
 						</div>
 					</div>
-					<!-- <div class="button-wrap"> -->
+
 					<a href="/token/{token.id}" class="custom-btn btn-3"><span>View</span></a>
-					<!-- </div> -->
 				</div>
 			</div>
 			<!-- 

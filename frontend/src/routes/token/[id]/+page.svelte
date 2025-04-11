@@ -1,5 +1,5 @@
 <script lang="ts">
-	import './token-id.css';
+	import cssFile from './token-id.css?url';
 	import { onMount } from 'svelte';
 	import { Chart, DoughnutController, ArcElement, Tooltip, Legend } from 'chart.js';
 	import type { PageProps } from './$types.js';
@@ -68,6 +68,10 @@
 	Chart.defaults.color = '#ffff';
 	Chart.defaults.font.size = 20;
 </script>
+
+<svelte:head>
+	<link rel="stylesheet" href={cssFile} />
+</svelte:head>
 
 <div class="wrapper-container fade-in-up mx-w-10 container mx-auto flex w-3/4 flex-col gap-6 p-4">
 	<div class="img-wrapper flex w-1/1 items-center justify-between">
