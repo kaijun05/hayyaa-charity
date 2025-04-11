@@ -1,9 +1,72 @@
 <script lang="ts">
-	import './../token.css';
 	import './token-id.css';
-
+	import { onMount } from 'svelte';
+	import { Chart, DoughnutController, ArcElement, Tooltip, Legend } from 'chart.js';
 	import type { PageProps } from './$types.js';
+
+	// Register required Chart.js components (now using DoughnutController)
+	Chart.register(DoughnutController, ArcElement, Tooltip, Legend);
+
+	// Initialize with proper types (changed to 'doughnut')
+	let chart: Chart<'doughnut', number[], string>;
+	let chartCanvas: HTMLCanvasElement;
+
+	// Chart data (keeping your 3 categories)
+	let chartValues = [10, 30, 60];
+	let chartLabels = ['Schools', 'Disaster', 'Homeless'];
+
+	// Props (if you need them)
 	let { data }: PageProps = $props();
+
+	onMount(() => {
+		const ctx = chartCanvas.getContext('2d');
+		if (!ctx) return;
+
+		chart = new Chart(ctx, {
+			type: 'doughnut', // Changed to doughnut
+			data: {
+				labels: chartLabels,
+				datasets: [
+					{
+						label: 'Distribution',
+						backgroundColor: [
+							'#004AAD', // Blue for Schools
+							'#5271FF', // Light blue for Disaster
+							'#0CC0DF' // Teal for Homeless
+						],
+						borderColor: 'rgb(255, 255, 255)',
+						borderWidth: 1,
+						data: chartValues
+					}
+				]
+			},
+			options: {
+				responsive: true,
+				cutout: '70%', // Adjust this to change the doughnut thickness (60-80% is typical)
+				plugins: {
+					legend: {
+						position: 'right'
+					},
+					tooltip: {
+						callbacks: {
+							label: (context) => {
+								return `${context.label}: ${context.raw}%`;
+							}
+						}
+					}
+				}
+			}
+		});
+
+		// Cleanup function
+		return () => {
+			if (chart) {
+				chart.destroy();
+			}
+		};
+	});
+	Chart.defaults.color = '#ffff';
+	Chart.defaults.font.size = 20;
 </script>
 
 <div class="wrapper-container fade-in-up mx-w-10 container mx-auto flex w-3/4 flex-col gap-6 p-4">
@@ -19,72 +82,83 @@
 	<!-- Grid Container -->
 	<div class="grid grid-cols-1 gap-6 p-6 md:grid-cols-2">
 		<!-- Section 1: Total Funds (Left) -->
-		<div class="rounded-lg border border-blue-100 bg-blue-50 p-6">
-			<h1 class="mb-4 text-2xl font-bold text-blue-800">Total funds collected</h1>
-			<p class="mb-4 text-4xl font-bold text-blue-900">RM 60,500</p>
-			<p class="text-gray-700">
-				The amount, a total of RM60,500, was collected from 76 generous donors. The funds were
-				distributed across three main categories...
+		<div class="rounded-lg p-6">
+			<h1 class="mb-4 text-2xl font-bold text-white">Total funds collected</h1>
+			<p class="mb-4 text-4xl font-bold text-white">RM 60,500</p>
+			<p class="text-xl text-white">
+				This week, a total of RM60,500 was collected from 76 generous donors. The funds were
+				distributed across three main categories: 10% to support underprivileged school children,
+				20% toward disaster relief for families affected by recent flash floods, and 70% to provide
+				shelter, meals, and basic necessities for the homeless. Through this effort, aid reached 450
+				recipients across multiple regions, with prioritization determined by an AI system based on
+				urgency, vulnerability, and community verification. The contribution if each donor played a
+				direct role in delivering timely, meaningful support
 			</p>
-			<p class="mt-4 font-medium text-blue-800">
-				To all the donors — Thank you for being part of this project.
+			<p class="font-xl mt-4 font-bold text-white">
+				To all the donors — thank you for being part of this impact.
 			</p>
 		</div>
 
 		<!-- Section 2: Distribution (Right) -->
-		<div class="rounded-lg border border-purple-100 bg-purple-50 p-6">
-			<h2 class="mb-4 text-xl font-bold text-purple-800">Distribution Breakdown</h2>
-			<div class="space-y-4">
-				<div class="rounded bg-white p-4 shadow">
-					<h3 class="font-semibold text-purple-700">Schools Support</h3>
-					<p class="text-2xl font-bold">RM 25,000</p>
-				</div>
-				<div class="rounded bg-white p-4 shadow">
-					<h3 class="font-semibold text-purple-700">Flood Relief</h3>
-					<p class="text-2xl font-bold">RM 20,500</p>
-				</div>
-				<div class="rounded bg-white p-4 shadow">
-					<h3 class="font-semibold text-purple-700">Community Aid</h3>
-					<p class="text-2xl font-bold">RM 15,000</p>
-				</div>
+		<div class="mb-4 p-6 text-2xl font-bold text-white">
+			<h2 class="mb-4 text-2xl font-bold text-white">Distribution Breakdown</h2>
+			<div class="pie-chart">
+				<canvas bind:this={chartCanvas} id="myChart"></canvas>
 			</div>
 		</div>
 
 		<!-- Section 3: Donors List (Left) -->
-		<div class="rounded-lg border border-green-100 bg-green-50 p-6">
-			<h2 class="mb-4 text-xl font-bold text-green-800">Donors list</h2>
+		<div class="mb-4 p-6 text-2xl font-bold text-white">
+			<h2 class="mb-4 text-xl font-bold text-white">Donors list</h2>
 			<div class="space-y-2">
 				<!-- Example donor items -->
-				<div class="flex justify-between rounded bg-white p-3 shadow-sm">
+				<div class="flex justify-between rounded bg-white p-3 text-black shadow-sm">
 					<span>John Doe</span>
 					<span class="font-medium">RM 1,000</span>
 				</div>
-				<div class="flex justify-between rounded bg-white p-3 shadow-sm">
+				<div class="flex justify-between rounded bg-white p-3 text-black shadow-sm">
 					<span>Jane Smith</span>
 					<span class="font-medium">RM 2,500</span>
 				</div>
-				<div class="flex justify-between rounded bg-white p-3 shadow-sm">
+				<div class="flex justify-between rounded bg-white p-3 text-black shadow-sm">
 					<span>Acme Corp</span>
+					<span class="font-medium">RM 5,000</span>
+				</div>
+				<div class="flex justify-between rounded bg-white p-3 text-black shadow-sm">
+					<span>Annoymous Donor</span>
+					<span class="font-medium">RM 5,000</span>
+				</div>
+				<div class="flex justify-between rounded bg-white p-3 text-black shadow-sm">
+					<span>Annoymous Donor</span>
+					<span class="font-medium">RM 5,000</span>
+				</div>
+				<div class="flex justify-between rounded bg-white p-3 text-black shadow-sm">
+					<span>Annoymous Donor</span>
+					<span class="font-medium">RM 5,000</span>
+				</div>
+				<div class="flex justify-between rounded bg-white p-3 text-black shadow-sm">
+					<span>Annoymous Donor</span>
+
 					<span class="font-medium">RM 5,000</span>
 				</div>
 			</div>
 		</div>
 
 		<!-- Section 4: Recipients (Right) -->
-		<div class="rounded-lg border border-amber-100 bg-amber-50 p-6">
-			<h2 class="mb-4 text-xl font-bold text-amber-800">Recipients</h2>
+		<div class="mb-4 p-6 text-2xl font-bold text-white">
+			<h2 class="mb-4 text-xl font-bold text-white">Recipients</h2>
 			<div class="space-y-4">
 				<div class="rounded bg-white p-4 shadow">
-					<h3 class="font-semibold text-amber-700">Sunshine Elementary</h3>
-					<p>RM 10,000 for school supplies</p>
+					<h3 class="font-semibold text-black">Kai Jun Kindergarden</h3>
+					<p class="text-black">RM 10,000 for school supplies</p>
 				</div>
 				<div class="rounded bg-white p-4 shadow">
-					<h3 class="font-semibold text-amber-700">Flood Victims (Klang Valley)</h3>
-					<p>RM 15,000 for emergency relief</p>
+					<h3 class="font-semibold text-black">Johnny (Flood Victims Klang Valley)</h3>
+					<p class="text-black">RM 15,000 for emergency relief</p>
 				</div>
 				<div class="rounded bg-white p-4 shadow">
-					<h3 class="font-semibold text-amber-700">Community Kitchen</h3>
-					<p>RM 8,000 for food supplies</p>
+					<h3 class="font-semibold text-black">Keat Hao (Kitchen Burned)</h3>
+					<p class="text-black">RM 8,000 for food supplies</p>
 				</div>
 			</div>
 		</div>

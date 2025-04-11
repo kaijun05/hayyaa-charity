@@ -6,3 +6,20 @@
 	font-weight: 500;
 	font-style: normal;
 }
+
+main {
+	align-content: center;
+	max-width: 1200px;
+	margin: auto;
+}
+
+.wrapper-container {
+	border-radius: 30px;
+	background-color: #636aae;
+	min-width: fit-content;
+	margin: 40px;
+}
+
+.img-wrapper {
+	padding: 0 48px;
+}
