@@ -85,17 +85,9 @@
                 >
               </div>
             </div>
-            <!-- <div class="button-wrap"> -->
-            <button class="custom-btn btn-3"><span>View</span></button>
-            <!-- </div> -->
+              <a href="/token/{token.id}" class="custom-btn btn-3"><span>View</span></a>
           </div>
         </div>
-        <!-- 
-        <div class="mt-4 border-t border-gray-200 pt-4">
-          <p class="text-gray-600">
-            There are lots of people helped out during this week, 2 of them are in sight need of me.
-          </p>
-        </div> -->
       </div>
     {/each}
   </div>
