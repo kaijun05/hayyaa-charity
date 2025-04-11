@@ -33,8 +33,8 @@
     <div class="flex gap-16">
         <a href="/#about-us" class="text-1xl hover:text-slate-300">About us</a>
         <a href="/token" class="text-1xl hover:text-slate-300">Token Tracker</a>
-        <a href="/donate" class="text-1xl hover:text-slate-300">Donate now</a>
-        <a href="/apply" class="text-1xl hover:text-slate-300">Apply help</a>
+        <a href="/donate" class="text-1xl hover:text-slate-300">Donate Now</a>
+        <a href="/apply" class="text-1xl hover:text-slate-300">Apply Help</a>
     </div>
     <div>
         <UserIcon />
