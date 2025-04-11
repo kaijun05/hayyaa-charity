@@ -23,7 +23,7 @@
 <div
     class="sticky top-0 z-50 h-[95px] font-semibold flex items-center justify-between px-3 bg-white/15 backdrop-blur navbar-transition"
     style="
-        width: {scrolled ? '100%' : '70rem'};
+        width: {scrolled ? '100%' : '80rem'};
         margin: {scrolled ? '0 auto 1rem auto' : '1rem auto'};
         border-radius: {scrolled ? '0px' : '9999px'};
         background-color: {scrolled ? '#1D2574' : ''};
@@ -34,6 +34,7 @@
         <a href="/#about-us" class="text-1xl hover:text-slate-300">About us</a>
         <a href="/token" class="text-1xl hover:text-slate-300">Token Tracker</a>
         <a href="/donate" class="text-1xl hover:text-slate-300">Donate now</a>
+        <a href="/apply" class="text-1xl hover:text-slate-300">Apply help</a>
     </div>
     <div>
         <UserIcon />

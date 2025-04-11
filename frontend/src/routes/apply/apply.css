@@ -1,0 +1,68 @@
+.application-form {
+  color: white;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.error-text {
+  color: #f87171;
+  margin-bottom: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.input {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.input:focus {
+  border-color: white;
+}
+
+.button-container {
+  display:flex;
+  justify-content: center;
+}
+
+.submit-button {
+  background-color: #16a34a;
+  color: white;
+  font-weight: 700;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #15803d;
+}
+
+.options option {
+  color: rgb(126, 121, 121);
+}
