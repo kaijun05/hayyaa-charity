@@ -29,7 +29,7 @@
         background-color: {scrolled ? '#1D2574' : ''};
     "
 >
-    <a href="/" rel="external" class="text-3xl font-semibold ml-8">Hayyaa</a>
+    <a href="/" rel="external" class="text-3xl font-semibold ml-8">DonorBridge</a>
     <div class="flex gap-16">
         <a href="/#about-us" class="text-1xl hover:text-slate-300">About us</a>
         <a href="/token" class="text-1xl hover:text-slate-300">Token Tracker</a>

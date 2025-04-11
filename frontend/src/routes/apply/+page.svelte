@@ -115,6 +115,13 @@
         </select>
       </div>
     
+      {#if healthCondition === 'Disabled'}
+      <div>
+        <label for="supportingDocument" class="form-label">Upload supporting document *</label>
+        <input type="file" class="input"/>
+      </div>
+    {/if}
+
       <div>
         <label for="employmentStatus" class="form-label">Select your employment status</label>
         <select id="employmentStatus" bind:value={employmentStatus} class="input options">
