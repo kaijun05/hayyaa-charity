@@ -124,3 +124,7 @@ button {
 .btn-3 span:hover:after {
 	width: 100%;
 }
+
+.search-bar {
+	margin: 0 20px;
+}
