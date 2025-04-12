@@ -8,8 +8,6 @@
    <main class=" max-w-[80rem] min-w-[50rem] mx-auto fade-in-up">
       <Hero />
       <Main />
-      <div class="grid p-4 grid-cols-3">
-        <Testimonial header='test' subText='test subtext 123 ' />
-      </div>
+      <Testimonial />
     </main>
         
