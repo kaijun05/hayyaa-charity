@@ -65,3 +65,9 @@ npm install
 npm run dev
 ```
 4. Go to http://localhost:5173/ to start using the prototype.
+
+## **Links**
+* **Figma Design**: https://www.figma.com/design/yX996HLe9a7ViCUPYFoX9Q/Hayyaa?node-id=0-1&t=1IzAhG1RKevo0DQn-1
+* **Ideas and Framework**: https://www.figma.com/board/9ciy162vVvW9ZXTQC6pDSP/Finalized-Framework?node-id=0-1&t=l8Sojl3eCExX15sg-1
+* **Figma Prototype**: https://www.figma.com/proto/yX996HLe9a7ViCUPYFoX9Q/Hayyaa?node-id=0-1&t=F6mQshqBMfSOMfKE-1
+* **Presentation Slides**: https://www.canva.com/design/DAGkJokAMQI/RjNhqdQ8pYa_S-h615ibng/view?utm_content=DAGkJokAMQI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hc4b3efe4c6
