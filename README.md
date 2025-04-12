@@ -47,7 +47,6 @@ unbanked, through digital solutions.
 Before running the project, make sure you have installed the following:
 * An IDE
 * pip (Python Package Manager)
-* Virtual Environment
 * Node.js (latest version)
 
 1. In your terminal, clone the repository by typing
