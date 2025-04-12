@@ -4,6 +4,6 @@
         <p class="text-[0.75rem]">Ash</p>
     </div>
     <a href="/profile">
-        <img src="./avatar.png" alt="Mike Wazowski stare" class="max-w-[73px] rounded-full">
+        <img src="./avatar.png" alt="User's profile picture" class="max-w-[73px] rounded-full">
     </a>
 </div>

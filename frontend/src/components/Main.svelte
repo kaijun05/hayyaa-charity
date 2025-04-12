@@ -3,7 +3,7 @@
 </script>
 
 
-<div id="about-us" class="max-w-6xl mx-auto px-6 py-32 text-2xl">
+<div id="about-us" class="mx-auto px-6 py-32 text-2xl">
     <div class="fade-in-section" use:fadeInOnScroll>
         <h2 class="text-6xl font-semibold mb-8">Every donation deserves a story</h2>
         <div class="space-y-6 text-white/80 max-w-4xl text-justify">
