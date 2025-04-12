@@ -9,10 +9,10 @@
       Transforming Charity with Transparency & AI
     </p>
     <div class="fade-in-section grid grid-cols-2 fade-in-up" use:fadeInOnScroll>
-      <Total header='funded' subtext='RM 600,000' />
-      <Total header='distributed' subtext='RM 555,000' />
-      <Total header='donors' subtext='20,000 donors' />
-      <Total header='helped' subtext='100,000 recipients' />
-      <ArrowButton text='Be a donor now ' buttonText='Donate' />
+      <Total header='Funded' subtext='RM 600,000' />
+      <Total header='Distributed' subtext='RM 555,000' />
+      <Total header='Donors' subtext='20,000 Donors' />
+      <Total header='Helped' subtext='100,000 Recipients' />
+      <ArrowButton text='Be a Donor Now!' buttonText='Donate' />
      </div>
 </div>

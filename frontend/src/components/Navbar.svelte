@@ -31,7 +31,7 @@
 >
     <a href="/" rel="external" class="text-3xl font-semibold ml-8">DonorBridge</a>
     <div class="flex gap-16">
-        <a href="/#about-us" class="text-1xl hover:text-slate-300">About us</a>
+        <a href="/#about-us" class="text-1xl hover:text-slate-300">About Us</a>
         <a href="/token" class="text-1xl hover:text-slate-300">Token Tracker</a>
         <a href="/donate" class="text-1xl hover:text-slate-300">Donate Now</a>
         <a href="/apply" class="text-1xl hover:text-slate-300">Apply Help</a>

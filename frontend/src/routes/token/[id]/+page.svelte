@@ -87,19 +87,18 @@
 	<div class="grid grid-cols-1 gap-6 p-6 md:grid-cols-2">
 		<!-- Section 1: Total Funds (Left) -->
 		<div class="rounded-lg p-6">
-			<h1 class="mb-4 text-2xl font-bold text-white">Total funds collected</h1>
+			<h1 class="mb-4 text-2xl font-bold text-white">Total Funds Collected</h1>
 			<p class="mb-4 text-4xl font-bold text-white">RM 60,500</p>
-			<p class="text-xl text-white">
-				This week, a total of RM60,500 was collected from 76 generous donors. The funds were
-				distributed across three main categories: 10% to support underprivileged school children,
-				20% toward disaster relief for families affected by recent flash floods, and 70% to provide
-				shelter, meals, and basic necessities for the homeless. Through this effort, aid reached 450
-				recipients across multiple regions, with prioritization determined by an AI system based on
-				urgency, vulnerability, and community verification. The contribution if each donor played a
-				direct role in delivering timely, meaningful support
+			<p class="text-xl text-white text-justify">
+				This week, a total of <strong>RM60,500</strong> was collected from <strong>76</strong> generous donors. The funds were
+				distributed across three main categories: <strong>10%</strong> to support <strong>underprivileged school children</strong>,
+				<strong>20%</strong> toward <strong>disaster relief for families affected by recent flash floods</strong>, and <strong>70%</strong> to provide
+				<strong>shelter, meals, and basic necessities for the homeless</strong>. Through this effort, aid reached <strong>450 recipients</strong> 
+				across multiple regions, with prioritization determined by our AI system based on
+				urgency, vulnerability, and community verification. 
 			</p>
 			<p class="font-xl mt-4 font-bold text-white">
-				To all the donors — thank you for being part of this impact.
+				To All the Donors &horbar; Thank You for Being Part of this Impact!
 			</p>
 		</div>
 
@@ -113,7 +112,7 @@
 
 		<!-- Section 3: Donors List (Left) -->
 		<div class="mb-4 p-6 text-2xl font-bold text-white">
-			<h2 class="mb-4 text-xl font-bold text-white">Donors list</h2>
+			<h2 class="mb-4 text-xl font-bold text-white">Donors List</h2>
 			<div class="space-y-2">
 				<!-- Example donor items -->
 				<div class="flex justify-between rounded bg-white p-3 text-black shadow-sm">

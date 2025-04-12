@@ -105,8 +105,8 @@
 
 					<div class="ml-5 grid grid-cols-2 gap-4">
 						<div>
-							<span class="text-sm text-gray-500">People helped this week</span>
-							<span class="text-lg font-medium text-gray-500">{token.number_of_people_donated}</span
+							<span class="text-sm text-gray-500">People Helped This Week - </span>
+							<span class="text-sm font-bold text-gray-500">{token.number_of_people_donated}</span
 							>
 						</div>
 					</div>

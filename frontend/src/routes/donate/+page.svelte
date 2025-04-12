@@ -76,13 +76,13 @@
 				</div>
 
 				<div class="custom-amount">
-					<label for="custom-amount" class="mb-2 block text-left">Choose your own amount (RM)</label
+					<label for="custom-amount" class="mb-2 block text-left">Choose Your Own Amount (RM)</label
 					>
 					<input
 						type="number"
 						id="custom-amount"
 						bind:value={customAmount}
-						placeholder="Enter amount"
+						placeholder="Enter Amount"
 					/>
 					{#if errorMessage}
 						<div class="error-message mt-2 text-red-500">{errorMessage}</div>
@@ -92,7 +92,7 @@
 				<div class="anonymize">
 					<label>
 						<input type="checkbox" bind:checked={isAnonymous} />
-						Anonymize your name
+						Anonymize Your Name?
 					</label>
 				</div>
 

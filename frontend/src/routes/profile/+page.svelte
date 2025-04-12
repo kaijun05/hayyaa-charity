@@ -6,8 +6,8 @@
 		name: 'Ash',
 		fullName: 'Ashikin',
 		email: 'ashikinHelps@gmail.com',
-		status: 'Top 1,000 donor of the month',
-		donorRank: 'Gold donor',
+		status: 'Top 1,000 Donor of the Month',
+		donorRank: 'Gold Donor',
 		donorSince: '30/3/2025',
 		totalDonated: 10000,
 		monthlyStreak: 5,
@@ -36,10 +36,10 @@
 
 		<div class="donor-rank">
 			<div>
-				<span class="mb-5 w-full text-right text-[1.5rem] font-bold text-white">Donor rank</span>
+				<span class="mb-5 w-full text-right text-[1.5rem] font-bold text-white">Donor Rank</span>
 				<div class="rank-badge">
 					{userProfile.donorRank}
-					<span>since {userProfile.donorSince}</span>
+					<span>since <strong>{userProfile.donorSince}</strong></span>
 				</div>
 			</div>
 			<img src="./gold_medal.png" alt="Gold Medal" class="medal" />
@@ -48,7 +48,7 @@
 
 	<div class="mx-auto mb-80 pt-20">
 		<div class="grid grid-cols-2 gap-y-8">
-			{#each [{ label: 'Total donated', value: `RM${userProfile.totalDonated.toLocaleString()}` }, { label: 'Monthly donation streak', value: userProfile.monthlyStreak }, { label: 'People helped', value: userProfile.peopleHelped }, { label: 'Tokens owned', value: userProfile.tokensOwned }] as stat}
+			{#each [{ label: 'Total Donated', value: `RM${userProfile.totalDonated.toLocaleString()}` }, { label: 'Monthly Donation Streak', value: userProfile.monthlyStreak }, { label: 'People Helped', value: userProfile.peopleHelped }, { label: 'Tokens Owned', value: userProfile.tokensOwned }] as stat}
 				<div>
 					<h3 class="text-4xl opacity-80">{stat.label}</h3>
 					<p class="mt-1 text-6xl font-semibold">{stat.value}</p>
@@ -79,8 +79,8 @@
 
 						<div class="ml-5 grid grid-cols-2 gap-4">
 							<div>
-								<span class="text-sm text-gray-500">People helped this week</span>
-								<span class="text-lg font-medium text-gray-500"
+								<span class="text-sm text-gray-500">People Helped This Week - </span>
+								<span class="text-lg font-bold text-gray-500"
 									>{token.number_of_people_donated}</span
 								>
 							</div>

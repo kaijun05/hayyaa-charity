@@ -62,7 +62,7 @@
 
 		<div class="form-grid">
 			<div>
-				<label for="fullName" class="form-label">Enter your name *</label>
+				<label for="fullName" class="form-label">Enter Your Name *</label>
 				<input
 					id="fullName"
 					type="text"
@@ -74,7 +74,7 @@
 			</div>
 
 			<div>
-				<label for="icNumber" class="form-label">Enter your IC number *</label>
+				<label for="icNumber" class="form-label">Enter Your IC/Passport Number *</label>
 				<input
 					id="icNumber"
 					type="text"
@@ -86,17 +86,17 @@
 			</div>
 
 			<div>
-				<label for="email" class="form-label">Enter your email (optional)</label>
+				<label for="email" class="form-label">Enter Your Email (optional)</label>
 				<input id="email" type="email" bind:value={email} placeholder="Email" class="input" />
 			</div>
 
 			<div>
-				<label for="phone" class="form-label">Enter your phone number (optional)</label>
+				<label for="phone" class="form-label">Enter Your Phone Number (optional)</label>
 				<input id="phone" type="tel" bind:value={phone} placeholder="Phone Number" class="input" />
 			</div>
 
 			<div>
-				<label for="address" class="form-label">Enter your address *</label>
+				<label for="address" class="form-label">Enter Your Address *</label>
 				<input
 					id="address"
 					type="text"
@@ -108,7 +108,7 @@
 			</div>
 
 			<div>
-				<label for="monthlyIncome" class="form-label">Enter your monthly income (RM) *</label>
+				<label for="monthlyIncome" class="form-label">Enter Your Monthly Income (RM) *</label>
 				<input
 					id="monthlyIncome"
 					type="number"
@@ -120,7 +120,7 @@
 			</div>
 
 			<div>
-				<label for="householdSize" class="form-label">Enter your household size *</label>
+				<label for="householdSize" class="form-label">Enter Your Household Size *</label>
 				<input
 					id="householdSize"
 					type="number"
@@ -132,7 +132,7 @@
 			</div>
 
 			<div>
-				<label for="healthCondition" class="form-label">Select your health condition</label>
+				<label for="healthCondition" class="form-label">Select Your Health Condition *</label>
 				<select id="healthCondition" bind:value={healthCondition} class="input options">
 					<option value="" disabled selected>Health Condition</option>
 					{#each healthOptions as option}
@@ -141,15 +141,15 @@
 				</select>
 			</div>
 
-			{#if healthCondition === 'Disabled'}
+			{#if healthCondition === 'Disabled' || healthCondition === 'Chronic Illness' || healthCondition === 'Other'}
 				<div>
-					<label for="supportingDocument" class="form-label">Upload supporting document *</label>
+					<label for="supportingDocument" class="form-label">Upload Supporting Document *</label>
 					<input type="file" class="input" />
 				</div>
 			{/if}
 
 			<div>
-				<label for="employmentStatus" class="form-label">Select your employment status</label>
+				<label for="employmentStatus" class="form-label">Select Your Employment Status</label>
 				<select id="employmentStatus" bind:value={employmentStatus} class="input options">
 					<option value="" disabled selected>Employment Status</option>
 					{#each employmentOptions as option}
@@ -159,9 +159,9 @@
 			</div>
 
 			<div>
-				<label for="remarks" class="form-label"
-					>Remarks: Explain your situation, needs, or circumstances</label
-				>
+				<label for="remarks" class="form-label">
+					Remarks: Explain Your Situation, Needs, or Circumstances
+					</label>
 				<textarea id="remarks" bind:value={remarks} rows="4" class="input"></textarea>
 			</div>
 
